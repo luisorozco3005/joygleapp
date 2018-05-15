@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>  
+      <button color="light" ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>     
+    <ion-title>
+      Home      
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content text-center>
+    <ion-slides id="sliderhome" autoplay="6000" slidesPerView="1" loop="true" effect="coverflow">
+         
+      <ion-slide *ngFor="let slide of slides" [ngStyle]="{'background' : 'url(' + slide.imagen + ')'}" >
+      
+      <section class="banner">
+          <span class="banner-titulo">{{slide.title}}</span>
+          <span class="precio">{{ slide.precio }}</span>
+      </section>
+
+    </ion-slide>       
+    </ion-slides>
+    <h5 id="titulo-ultimo">New algo</h5>
+     <ion-card *ngFor='let tarjeta of tarjetas'>
+            <section>
+                <img src={{tarjeta.imagen}}/>
+            </section>
+        
+        <ion-card-content>
+          <span class="title-address">{{tarjeta.title}}</span>
+          <span class="city">({{tarjeta.city}})</span>
+        </ion-card-content>
+
+        <ion-row class="info">
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon color="gris" name="leaf"></ion-icon>
+                <span>bedroom :</span>
+                <div>{{ tarjeta.bedroom}}</div>
+              </button>
+            </ion-col>
+          
+            <ion-col>
+              <button ion-button icon-left clear small>
+                <ion-icon color="gris" name="moon"></ion-icon>
+                <span>bathroom:</span>
+                <div>{{ tarjeta.bathroom}}</div>
+              </button>
+            </ion-col>            
+          </ion-row>
+
+      </ion-card> 
+
+      <!-- Menu popup -->
+
+      <div class="popup-menu">
+        <div class="popup-menu-overlay" [ngClass]="{'in': openMenu}" (click)="togglePopupMenu()"></div>
+        <div class="popup-menu-toggle" (click)="togglePopupMenu()" [ngClass]="{'out': openMenu}"></div>
+        <div class="popup-menu-panel" [ngClass]="{'in': openMenu}">
+          <div class="popup-menu-item" (click)="goToCatalogue()">
+            <ion-icon name="book"></ion-icon>
+              <span>Catalogue</span>
+          </div>
+          <div class="popup-menu-item" (click)="goToFavorite()">
+            <ion-icon name="star"></ion-icon>
+            <span>Favorite</span>
+          </div>
+          <div class="popup-menu-item" (click)="goToAdvanced()">
+            <ion-icon name="search"></ion-icon>           
+            <span>Advanced search</span>
+          </div>
+                  
+          
+        </div>
+      </div>
+
+     
+
+</ion-content>
+
+<ion-footer>
+    <button ion-button large full no-margin color="corange" item-end >
+        <img src="assets/imgs/10.png">
+    </button>
+  </ion-footer>

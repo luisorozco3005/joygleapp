@@ -1,0 +1,356 @@
+page-home {
+    $black-overlay: rgba(255, 254, 254, 0.658);
+     $text-color: #666;
+     $banner-text-color: rgb(70, 70, 70);
+
+    ion-slides,
+    .swiper-container {
+      height: 32vh;
+      width: auto;
+    }
+    .swiper-slide {
+      background-size: cover !important;
+      background-position: center !important;
+    }
+    .swiper-pagination-bullet {
+      background-color: white;
+    }
+    .sliderhome ion-slide img{
+        height: 35vh;
+        width: auto;
+        margin: 0%;
+        padding: 0%;
+        max-width: 39vh;
+
+        
+    }
+   
+
+    .banner {
+        color: $banner-text-color;
+        background: $black-overlay;
+        height: 6.8vh;
+        width: 100vw;
+        position: absolute;
+        bottom: 5px;
+
+        .banner-titulo {
+            display: block;
+            font-size: 1.7rem;
+            text-align: left;
+            margin-left: 1.1vw;
+        }
+
+        .precio {
+            display: block;
+            font-size: 2.6rem;
+            text-align: left;
+            margin-left: 1.1vw;
+        }
+    }
+
+
+    .custom-pagination.swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+      }
+      .custom-pagination.swiper-pagination-bullet-active {
+        color: #fff;
+        background: #f52c2c;
+        transition: transform 0.3s;
+        transform: scale(1.5);
+      }
+// ultimas agregadas
+      #titulo-ultimo{
+          margin-top: 1vh;
+          color: #f66600;
+          font-weight: bold;
+          border-bottom: #ff6600 solid 1px;
+          margin: 1rem;
+      }
+
+
+ // tarjetas
+ .mini-banner {
+    color: $banner-text-color;
+    background: $black-overlay;
+    height: 6.8vh;
+    width: 10vw;
+    position: absolute;            
+    top: -80px;
+    
+
+
+}
+    .card card-md{
+        z-index: -1;
+    }
+    .card-md{
+        height: 42vh;
+        width: auto;
+        border-radius: 2.8%;
+        background-color: #e6e6e6;
+        margin: 0.8rem;
+        z-index: 0 !important;
+
+        section img{
+            
+            height: 30vh;
+            width: 100vw;
+            position: relative;
+            background-size: cover;
+           
+
+        }
+
+        
+        .title-address{
+            font-weight: bold;
+            color: #ff6600;
+            display: block;
+            width: 100vw;
+            float: left;
+            text-align: left;
+        }
+        ion-card-content.card-content.card-content-md{
+            padding: 0;
+            display: block;
+            float: left;
+            margin: 0.2rem 0 0 0.4rem;
+        }
+        .city{
+            color: rgb(104, 102, 102);
+            display: block;
+            width: 100vw;
+            text-align: left;
+            border-bottom: #6a6565 solid 1px, padding ;
+    
+            
+        }
+        .info{
+            margin-bottom:2px; 
+            display: block;
+            float: right;
+        }
+       
+        
+    }
+
+
+
+    // Boton Menu popup
+
+    ion-badge{
+        right: calc(50% - 30px) !important;
+        top: -5px;
+        position: absolute;
+        right: 4%;
+        padding: 1px 6px;
+        height: auto;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    
+      .popup-menu ion-icon {
+        text-align: center;
+        color: white;
+        font-size: 2.5em;
+      }
+      .popup-menu-overlay {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        background-image: -webkit-linear-gradient(rgba(68, 68, 68, 0.5) 0%, rgba(68, 68, 68, 0.25) 100%);
+        background-image: linear-gradient(rgba(68, 68, 68, 0.5) 0%, rgba(68, 68, 68, 0.25) 100%);
+      }
+      .popup-menu-overlay.in {
+        opacity: 1;
+        visibility: visible;
+      }
+      .popup-menu-toggle {
+        position: fixed;
+        width: 50px;
+        height:50px;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -20px;
+        background-color: rgb(245, 245, 245);
+        border-radius: 50%;        
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        z-index: 3;
+        
+      }
+      .popup-menu-toggle:before {
+        position: absolute;
+        content: '\f10a';
+        font-family: "Ionicons";
+        width: 40px;
+        height: 40px;
+        top: 0.9vh;
+        left: 1.5vw;
+        line-height: 40px;
+        text-align: center;
+        font-size: 30px;
+        color: rgb(97, 96, 96);
+        opacity: 1;
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        -webkit-transform-origin: 100% 100%;
+        transform-origin: 100% 100%;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      .popup-menu-toggle.out {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+      }
+      .popup-menu-toggle.out:before {
+        -webkit-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      .popup-menu-panel {
+        position: fixed;
+        width: 300px;
+        height: 130px;
+        border-radius: 5%;
+        bottom: 50px;
+        left: 50%;
+        margin-left: -150px;
+        padding: 0px 5px;
+        background-color: rgba(254, 68, 6, 0.94);
+        z-index: 102;
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        -webkit-transition-delay: 0.15s;
+        transition-delay: 0.15s;
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+      .popup-menu-panel .popup-menu-item {
+        margin: auto;
+        -webkit-box-flex: 1 0 30%;
+        -webkit-flex: 1 0 30%;
+        -moz-box-flex: 1 0 30%;
+        -moz-flex: 1 0 30%;
+        -ms-flex: 1 0 30%;
+        flex: 1 0 30%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+      }
+      .popup-menu-panel .popup-menu-item i {
+        margin: auto 0px 5px 0px;
+        padding: 0px;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: white;
+      }
+      .popup-menu-panel .popup-menu-item span {
+        padding: 0px;
+        margin: 0px 0px auto 0px;
+        color: white;
+        text-align: center;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 11px;
+      }
+      .popup-menu-panel .popup-menu-item:active i {
+        color: rgb(221,65,53);
+        -webkit-transition: all 0.15s;
+        transition: all 0.15s;
+      }
+      .popup-menu-panel .popup-menu-item:active span {
+        color: rgb(221,65,53);
+        -webkit-transition: all 0.15s;
+        transition: all 0.15s;
+      }
+      .popup-menu-panel.in {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+      }
+      .popup-menu-panel.in .popup-menu-item {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        -webkit-transition-delay: 0.15s;
+        transition-delay: 0.15s;
+      }
+
+       // Footer
+      
+       
+
+       
+    ion-footer{
+        height: 5vh;
+        width: 100%;
+        z-index: 0;
+        
+        img{
+            margin: auto;
+            padding: 0;
+            margin: 1rem;
+            position: relative;
+            left: 34vw;
+            bottom: 1.5vh;
+            height: 5vh;
+            
+            
+
+        }
+    }
+
+
+      
+
+}
