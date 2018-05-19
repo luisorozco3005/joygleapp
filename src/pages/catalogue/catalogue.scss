@@ -1,0 +1,94 @@
+page-catalogue {
+    $black-overlay: rgba(255, 254, 254, 0.658);
+    $text-color: #666;
+    $banner-text-color: rgb(70, 70, 70);
+
+ // tarjetas
+ .mini-banner {
+    color: $banner-text-color;
+    background: $black-overlay;
+    height: 6.8vh;
+    width: 10vw;
+    position: absolute;            
+    top: -80px;
+    
+
+
+}
+    .card card-md{
+        z-index: -1;
+    }
+    .card-md{
+        min-height: 200px;
+        background-size: cover;
+        border-radius: 2.8%;
+        background-color: #e6e6e6;
+        margin: 0.8rem;
+        z-index: 0 !important;
+
+        section img{
+            
+            height: 20vh;
+            width: 80vw;
+            position: relative;
+            background-size: cover;
+           
+
+        }
+
+        
+        .title-address{
+            font-weight: bold;
+            color: #ff6600;
+            display: block;
+            width: 100vw;
+            float: left;
+            text-align: left;
+        }
+        ion-card-content.card-content.card-content-md{
+            padding: 0;
+            display: block;
+            float: left;
+            margin: 0.2rem 0 0 0.4rem;
+        }
+        .city{
+            color: rgb(104, 102, 102);
+            display: block;
+            width: 100vw;
+            text-align: left;
+            border-bottom: #6a6565 solid 1px, padding ;            
+        }
+        .precio{
+            color: rgb(104, 102, 102);
+            display: block;
+            width: 100vw;
+            text-align: left;
+            border-bottom: #6a6565 solid 1px, padding ;            
+        }
+        .info{
+            margin-bottom:2px; 
+            display: block;
+            float: right;
+        }
+       
+        
+    }
+    ion-footer{
+        height: 5vh;
+        width: 100%;
+        z-index: 5;
+        
+        img{
+            margin: auto;
+            padding: 0;
+            margin: 1rem;
+            position: relative;
+            left: 34vw;
+            bottom: 1.5vh;
+            height: 5vh;
+            
+            
+
+        }
+    }
+}

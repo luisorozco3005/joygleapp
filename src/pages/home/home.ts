@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { RealEstateListingPage } from '../real-estate-listing/real-estate-listing';
+import { CataloguePage } from '../catalogue/catalogue';
+import { FavoritePage } from '../favorite/favorite';
 
 @Component({
   selector: 'page-home',
@@ -59,6 +62,11 @@ export class HomePage {
 },
 ];
 
+goToDetail() {
+  
+  this.navCtrl.push(RealEstateListingPage);
+}
+
 // Metodo de popup Menu
 
 togglePopupMenu() {
@@ -66,13 +74,11 @@ togglePopupMenu() {
 }
 
 goToCatalogue() {
-  alert('Catalogue clicked.');
-  this.togglePopupMenu();
+  this.navCtrl.push(CataloguePage);
 }
 
 goToFavorite() {
-  alert('Favorite clicked.');
-  this.togglePopupMenu();
+  this.navCtrl.push(FavoritePage);
 }
 
 goToAdvanced() {
